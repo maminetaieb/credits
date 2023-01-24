@@ -1,14 +1,23 @@
 package com.example.app;
 
+import com.example.entity.Client;
+import com.example.service.ClientService;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-public class ListClients {
+import java.net.URL;
+
+import java.util.ResourceBundle;
+
+public class ListClients implements Initializable {
 
     @FXML
     private Button chercherBtn;
@@ -17,22 +26,23 @@ public class ListClients {
     private TextField chercherField;
 
     @FXML
-    private TableColumn<?, ?> creditsC;
+    private TableColumn<Client, Double> creditsC;
 
     @FXML
-    private TableView<?> listClient;
+    private TableView<Client> listClient;
+    private ObservableList<Client> listData;
 
     @FXML
     private AnchorPane listClientPane;
 
     @FXML
-    private TableColumn<?, ?> nomC;
+    private TableColumn<Client, String> nomC;
 
     @FXML
     private Button nouveauClientBtn;
 
     @FXML
-    private TableColumn<?, ?> numTelC;
+    private TableColumn<Client, String> numTelC;
 
     @FXML
     private Button sedeconnecterBtn;
@@ -42,7 +52,27 @@ public class ListClients {
 
     @FXML
     void chercherClient(ActionEvent event) {
-
+        ClientService clients = new ClientService();
+        if (chercherField.getText().isBlank()) {
+            listData = FXCollections.observableArrayList(clients.find(null, null));
+        } else {
+            try {
+                Integer.parseInt(chercherField.getText());
+                listData = FXCollections.observableArrayList(
+                        clients.findByPhoneNumber(chercherField.getText(), null, null)
+                );
+            } catch (Exception e) {
+                listData = FXCollections.observableArrayList(
+                        clients.findByFullName(chercherField.getText(), null, null)
+                );
+                listClient.getItems().clear();
+                listClient.getItems().addAll(listData);
+                listClient.refresh();
+            }
+        }
+        listClient.getItems().clear();
+        listClient.getItems().addAll(listData);
+        listClient.refresh();
     }
 
     @FXML
@@ -60,4 +90,18 @@ public class ListClients {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        nomC.setCellValueFactory(
+                c -> c.getValue().fullNameProperty()
+        );
+        numTelC.setCellValueFactory(
+                c -> c.getValue().phoneNumberProperty()
+        );
+        creditsC.setCellValueFactory(
+                c -> c.getValue().totalCreditsProperty().asObject()
+        );
+        listClient.getColumns().setAll(nomC, numTelC, creditsC);
+        chercherClient(null);
+    }
 }

@@ -34,7 +34,7 @@ public class ClientService implements Service<Client> {
                     + "`id`, `fullname`, `phoneNumber`"
                     + ") VALUES ("
                     + "?, ?, ?"
-                    + ")";
+                    + ");";
             PreparedStatement ps = connection.prepareStatement(req);
             ps.setObject(1, instance.getId(), java.sql.Types.INTEGER);
             ps.setString(2, instance.getFullName());
@@ -58,6 +58,7 @@ public class ClientService implements Service<Client> {
             if (offset != null) {
                 req += " OFFSET " + offset;
             }
+            req += ";";
             Statement s = connection.createStatement();
             ResultSet rs = s.executeQuery(req);
             while (rs.next()) {
@@ -77,6 +78,7 @@ public class ClientService implements Service<Client> {
     public Client findOne(Integer id) {
         try {
             String req = "SELECT * FROM `clients` WHERE `id`="+id;
+            req += ";";
             Statement s = connection.createStatement();
             ResultSet rs = s.executeQuery(req);
             if (rs.next()) {
@@ -96,13 +98,14 @@ public class ClientService implements Service<Client> {
     public List<Client> findByFullName(String fullName, Integer offset, Integer rowCount) {
         List<Client> l = new ArrayList<>();
         try {
-            String req = "SELECT * FROM `clients` WHERE `fullName` LIKE " + fullName;
+            String req = "SELECT * FROM `clients` WHERE `fullName` LIKE '%" + fullName + "%'";
             if (rowCount != null) {
                 req += " LIMIT "+ rowCount;
             }
             if (offset != null) {
                 req += " OFFSET " + offset;
             }
+            req += ";";
             Statement s = connection.createStatement();
             ResultSet rs = s.executeQuery(req);
             while (rs.next()) {
@@ -122,13 +125,14 @@ public class ClientService implements Service<Client> {
     public List<Client> findByPhoneNumber(String phoneNumber, Integer offset, Integer rowCount) {
         List<Client> l = new ArrayList<>();
         try {
-            String req = "SELECT * FROM `clients` WHERE `phoneNumber` LIKE " + phoneNumber;
+            String req = "SELECT * FROM `clients` WHERE `phoneNumber` LIKE '%" + phoneNumber + "%'";
             if (rowCount != null) {
                 req += " LIMIT "+ rowCount;
             }
             if (offset != null) {
                 req += " OFFSET " + offset;
             }
+            req += ";";
             Statement s = connection.createStatement();
             ResultSet rs = s.executeQuery(req);
             while (rs.next()) {
@@ -150,6 +154,7 @@ public class ClientService implements Service<Client> {
         try {
             String req = "UPDATE `clients` SET "
                     + "`fullName`=?, `phoneNumber`=? WHERE `id`=" + instance.getId();
+            req += ";";
             PreparedStatement ps = connection.prepareStatement(req);
             ps.setObject(1, instance.getId(), java.sql.Types.INTEGER);
             ps.setString(2, instance.getFullName());
@@ -166,6 +171,7 @@ public class ClientService implements Service<Client> {
     public Boolean delete(Client instance) {
         try {
             String req = "DELETE FROM `clients` WHERE `id`="+instance.getId();
+            req += ";";
             Statement s = connection.createStatement();
 
             return s.executeUpdate(req) > 0;

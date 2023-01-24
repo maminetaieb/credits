@@ -32,7 +32,7 @@ public class CreditService implements Service<Credit> {
                     + "`id`, `clientId`, `amount`, `date`"
                     + ") VALUES ("
                     + "?, ?, ?, ?"
-                    + ")";
+                    + ");";
             PreparedStatement ps = connection.prepareStatement(req);
             ps.setObject(1, instance.getId(), java.sql.Types.INTEGER);
             ps.setObject(2, instance.getClientId(), java.sql.Types.INTEGER);
@@ -56,6 +56,7 @@ public class CreditService implements Service<Credit> {
             if (offset != null) {
                 req += " OFFSET " + offset;
             }
+            req += ";";
             Statement s = connection.createStatement();
             ResultSet rs = s.executeQuery(req);
             while (rs.next()) {
@@ -83,6 +84,7 @@ public class CreditService implements Service<Credit> {
             if (offset != null) {
                 req += " OFFSET " + offset;
             }
+            req += ";";
             Statement s = connection.createStatement();
             ResultSet rs = s.executeQuery(req);
             while (rs.next()) {
@@ -105,6 +107,7 @@ public class CreditService implements Service<Credit> {
         try {
             String req = "UPDATE `credits` SET "
                     + "`clientId`=?, `amount`=?, `date`=? WHERE `id`=" + instance.getId();
+            req += ";";
             PreparedStatement ps = connection.prepareStatement(req);
             ps.setObject(1, instance.getClientId(), java.sql.Types.INTEGER);
             ps.setDouble(2, instance.getAmount());
@@ -120,6 +123,7 @@ public class CreditService implements Service<Credit> {
     public Boolean delete(Credit instance) {
         try {
             String req = "DELETE FROM `credits` WHERE `id`=" + instance.getId();
+            req += ";";
             Statement s = connection.createStatement();
 
             return s.executeUpdate(req) > 0;
@@ -133,6 +137,7 @@ public class CreditService implements Service<Credit> {
     public Boolean deleteByClient(Integer clientId) {
         try {
             String req = "DELETE FROM `credits` WHERE `clientId`=" + clientId;
+            req += ";";
             Statement s = connection.createStatement();
 
             return s.executeUpdate(req) > 0;
