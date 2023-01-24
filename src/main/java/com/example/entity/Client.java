@@ -1,5 +1,7 @@
 package com.example.entity;
 
+import com.example.service.CreditService;
+
 public class Client {
     private Integer id;
     private String fullName;
@@ -28,6 +30,11 @@ public class Client {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public double getTotalCredits() {
+        return new CreditService().findByClientId(this.getId(), null, null)
+                .stream().mapToDouble(credit -> credit.getAmount()).sum();
     }
 
     public Client(Integer id, String fullName, String phoneNumber) {
