@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="listClientPane" prefHeight="651.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.ListClients">
+   <children>
+      <TableView fx:id="listClient" layoutX="111.0" layoutY="184.0" prefHeight="423.0" prefWidth="610.0">
+        <columns>
+          <TableColumn fx:id="nomC" prefWidth="214.0" text="Client" />
+          <TableColumn fx:id="numTelC" prefWidth="235.0" text="Numéro Téléphone" />
+            <TableColumn fx:id="creditsC" prefWidth="227.0" text="Crédits" />
+        </columns>
+      </TableView>
+      <Button fx:id="nouveauClientBtn" layoutX="764.0" layoutY="258.0" mnemonicParsing="false" onAction="#nouveauClient" prefHeight="60.0" prefWidth="148.0" text="Nouveau Client" />
+      <Button fx:id="voirClientBtn" layoutX="764.0" layoutY="366.0" mnemonicParsing="false" onAction="#voirClient" prefHeight="60.0" prefWidth="148.0" text="Voir Client" />
+      <TextField fx:id="chercherField" layoutX="133.0" layoutY="112.0" onAction="#chercherClientField" prefHeight="45.0" prefWidth="492.0" promptText="Nom / Num Tel Client" />
+      <Button fx:id="chercherBtn" layoutX="674.0" layoutY="116.0" mnemonicParsing="false" onAction="#chercherClient" prefHeight="37.0" prefWidth="116.0" text="Chercher" />
+      <Button fx:id="sedeconnecterBtn" layoutX="806.0" layoutY="26.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #199cc3;" text="Se déconnecter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
