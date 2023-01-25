@@ -65,7 +65,7 @@ public class LIstCredits implements Initializable {
         if (!creditTF.getText().isBlank()) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Ajouter Credit");
-            alert.setContentText("Voulez vraiment ajouter le credit au client");
+            alert.setContentText("Voulez vous vraiment ajouter ce credit au client?");
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == ButtonType.OK) {
                 new CreditService().insert(
@@ -97,7 +97,7 @@ public class LIstCredits implements Initializable {
         if (!paymentTF.getText().isBlank()) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Ajouter Paiement");
-            alert.setContentText("Voulez vraiment ajouter le paiement au client");
+            alert.setContentText("Voulez vous vraiment ajouter ce paiement au client?");
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == ButtonType.OK) {
                 new CreditService().insert(
