@@ -145,4 +145,11 @@ public class LIstCredits implements Initializable {
         listCreditView.getItems().setAll(listCredits);
         listCreditView.refresh();
     }
+
+    @FXML
+    void goToListeClients(ActionEvent event) throws IOException {
+        ListClients.selectedClient = null;
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("ListClients.fxml"));
+        ListCreditsPane.getChildren().setAll(pane);
+    }
 }

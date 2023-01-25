@@ -57,5 +57,6 @@
       </Text>
       <TextField fx:id="creditTF" layoutX="364.0" layoutY="476.0" />
       <TextField fx:id="paymentTF" layoutX="721.0" layoutY="476.0" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToListeClients" text="Voir liste clients" />
    </children>
 </AnchorPane>
