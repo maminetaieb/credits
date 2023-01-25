@@ -1,6 +1,7 @@
 package com.example.app;
 
 import com.example.entity.Credit;
+import com.example.service.ClientService;
 import com.example.service.CreditService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -44,20 +45,21 @@ public class LIstCredits implements Initializable {
 
     @FXML
     private Button PaiementBtn;
+    protected static boolean payment;
 
     @FXML
     void nouveauCredit(ActionEvent event) {
-
+        payment = false;
     }
 
     @FXML
     void supprimerClient(ActionEvent event) {
-
+        new ClientService().delete(ListClients.selectedClient);
     }
 
     @FXML
     void paiement(ActionEvent event) {
-
+        payment = true;
     }
 
     @Override
@@ -68,6 +70,7 @@ public class LIstCredits implements Initializable {
         nomText.setText(ListClients.selectedClient.getFullName());
         numtelText.setText(ListClients.selectedClient.getPhoneNumber());
         totalText.setText(String.valueOf(listCredits.stream().mapToDouble(credit -> credit.getAmount()).sum()));
+        MontantMaxText.setText(String.valueOf(ListClients.selectedClient.getMax()));
         listCreditView.getItems().clear();
         listCreditView.getItems().setAll(listCredits);
         listCreditView.refresh();
