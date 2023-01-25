@@ -31,6 +31,9 @@ public class LIstCredits implements Initializable {
     private Text MontantMaxText;
 
     @FXML
+    private Text maxText;
+
+    @FXML
     private Button NouveaCreditBtn;
     @FXML
     private Text totalText;
@@ -86,7 +89,7 @@ public class LIstCredits implements Initializable {
         nomText.setText(ListClients.selectedClient.getFullName());
         numtelText.setText(ListClients.selectedClient.getPhoneNumber());
         totalText.setText(String.valueOf(listCredits.stream().mapToDouble(credit -> credit.getAmount()).sum()));
-        MontantMaxText.setText(String.valueOf(ListClients.selectedClient.getMax()));
+        maxText.setText(String.valueOf(ListClients.selectedClient.getMax()));
         listCreditView.getItems().clear();
         listCreditView.getItems().setAll(listCredits);
         listCreditView.refresh();
