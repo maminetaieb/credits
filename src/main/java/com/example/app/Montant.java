@@ -6,19 +6,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-public class ModifMaxController {
-
-    @FXML
-    private TextField ModifMax;
+public class Montant {
 
     @FXML
     private Button ValiderBtn;
 
     @FXML
-    private AnchorPane modiffMaxPane;
+    private TextField montantField;
 
     @FXML
-    void modifMax(ActionEvent event) {
+    private AnchorPane montantPane;
+
+    @FXML
+    void montant(ActionEvent event) {
 
     }
 
@@ -28,4 +28,3 @@ public class ModifMaxController {
     }
 
 }
-

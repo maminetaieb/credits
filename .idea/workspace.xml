@@ -10,7 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="gg">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/app/Montant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/app/CreateClient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/app/Historique.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/app/Montant.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/ModifMaxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/ModifMaxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/app/ListClients.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/app/ListClients.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/app/ModifMax.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/app/ModifMax.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,7 +93,7 @@
       <workItem from="1674504214558" duration="7985000" />
       <workItem from="1674578240307" duration="5431000" />
       <workItem from="1674585414919" duration="957000" />
-      <workItem from="1674602528887" duration="783000" />
+      <workItem from="1674602528887" duration="2870000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1674583071513</created>
