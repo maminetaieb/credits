@@ -9,13 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="xmlsdgsfgfdg">
+    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="ssdfsdf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/LIstCredits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/LIstCredits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/Montant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/Montant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Credit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/app/LIstCredits.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/app/LIstCredits.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674674691190</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ssdfsdf">
+      <created>1674676810439</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674676810439</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +126,8 @@
     <MESSAGE value="gg" />
     <MESSAGE value="fix workspace.xml" />
     <MESSAGE value="xmlsdgsfgfdg" />
-    <option name="LAST_COMMIT_MESSAGE" value="xmlsdgsfgfdg" />
+    <MESSAGE value="ssdfsdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="ssdfsdf" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/credits$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1674672389478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
