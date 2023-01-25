@@ -40,7 +40,7 @@ public class Historique implements Initializable {
     void changeDates(ActionEvent event) {
         CreditService credits = new CreditService();
         historiqueView.getItems().clear();
-        //historiqueView.getItems().setAll(credits.find(java.sql.Date.valueOf(startDate.getValue()), java.sql.Date.valueOf(endDate.getValue()), null, null));
+        //historiqueView.getItems().setAll(startDate.is==null?credits.findByDate(java.sql.Date.valueOf(startDate.getValue()), java.sql.Date.valueOf(endDate.getValue())));
         historiqueView.refresh();
     }
 
