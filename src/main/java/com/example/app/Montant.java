@@ -28,14 +28,7 @@ public class Montant {
 
     @FXML
     void valider(ActionEvent event) {
-        new CreditService().insert(
-                new Credit(null,
-                        ListClients.selectedClient.getId(),
-                        LIstCredits.payment?
-                                -Double.parseDouble(montantField.getText())
-                                :Double.parseDouble(montantField.getText()),
-                        new Date())
-        );
+
     }
 
 }

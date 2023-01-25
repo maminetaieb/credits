@@ -1,5 +1,7 @@
 package com.example.entity;
 
+import com.example.service.ClientService;
+
 import java.util.Date;
 
 public class Credit {
@@ -49,6 +51,6 @@ public class Credit {
 
     @Override
     public String toString() {
-        return (amount > 0 ? "credit " : "paiement ") + Math.abs(amount) + " a " + date;
+        return new ClientService().findOne(this.getClientId()).getFullName() + (amount > 0 ? "credit " : "paiement ") + Math.abs(amount) + " a " + date;
     }
 }
