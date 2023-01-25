@@ -9,24 +9,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="loginPane" prefHeight="584.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.Login">
+<AnchorPane fx:id="loginPane" prefHeight="651.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.Login">
    <children>
-      <ImageView fitHeight="220.0" fitWidth="238.0" layoutX="89.0" layoutY="8.0">
+      <ImageView fitHeight="253.0" fitWidth="276.0" layoutX="305.0">
          <image>
             <Image url="@../img/login-pic.png" />
          </image>
       </ImageView>
-      <TextField fx:id="nameField" layoutX="115.0" layoutY="260.0" prefHeight="43.0" prefWidth="238.0" promptText="Identifiant" />
-      <PasswordField fx:id="passField" layoutX="115.0" layoutY="357.0" prefHeight="43.0" prefWidth="238.0" promptText="Mot de Passe" />
-      <Button fx:id="LoginBtn" layoutX="177.0" layoutY="452.0" mnemonicParsing="false" onAction="#login" prefHeight="43.0" prefWidth="115.0" style="-fx-background-color: #199cc3;" text="Se Connecter" textFill="WHITE">
+      <TextField fx:id="nameField" layoutX="333.0" layoutY="281.0" prefHeight="43.0" prefWidth="276.0" promptText="Identifiant" />
+      <PasswordField fx:id="passField" layoutX="333.0" layoutY="378.0" prefHeight="43.0" prefWidth="276.0" promptText="Mot de Passe" />
+      <Button fx:id="LoginBtn" layoutX="409.0" layoutY="473.0" mnemonicParsing="false" onAction="#login" prefHeight="43.0" prefWidth="139.0" style="-fx-background-color: #199cc3;" text="Se Connecter" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="179.0" layoutY="198.0" prefHeight="43.0" prefWidth="133.0" text="Connexion">
+      <Label layoutX="409.0" layoutY="208.0" prefHeight="54.0" prefWidth="174.0" text="Connexion">
          <font>
-            <Font size="22.0" />
+            <Font size="24.0" />
          </font>
       </Label>
    </children>
