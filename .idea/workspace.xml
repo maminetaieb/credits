@@ -9,18 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="sdsdfsdfsdf">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/app_jar/app.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/Historique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/Historique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/ListClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/ListClients.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/ModifMaxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/ModifMaxController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/Montant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/Montant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/ClientService.java" afterDir="false" />
+    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="sdsdfsdfsdfvsdgdfg">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/CreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/CreditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/util/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +94,7 @@
       <workItem from="1674578240307" duration="5431000" />
       <workItem from="1674585414919" duration="957000" />
       <workItem from="1674602528887" duration="783000" />
-      <workItem from="1674670068196" duration="2098000" />
+      <workItem from="1674670068196" duration="2750000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1674583071513</created>
@@ -127,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674605546701</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="sdsdfsdfsdfvsdgdfg">
+      <created>1674672244877</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674672244877</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +144,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gg" />
     <MESSAGE value="sdsdfsdfsdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="sdsdfsdfsdf" />
+    <MESSAGE value="sdsdfsdfsdfvsdgdfg" />
+    <option name="LAST_COMMIT_MESSAGE" value="sdsdfsdfsdfvsdgdfg" />
   </component>
 </project>
