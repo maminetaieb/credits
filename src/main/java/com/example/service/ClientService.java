@@ -181,7 +181,7 @@ public class ClientService implements Service<Client> {
             req += ";";
             Statement s = connection.createStatement();
 
-            return s.executeUpdate(req) > 0;
+            return s.executeUpdate(req) > 0 && new CreditService().deleteByClient(instance.getId());
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }

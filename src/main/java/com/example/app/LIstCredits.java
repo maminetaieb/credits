@@ -10,12 +10,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -36,6 +38,8 @@ public class LIstCredits implements Initializable {
     @FXML
     private Button NouveaCreditBtn;
     @FXML
+    private TextField creditTF;
+    @FXML
     private Text totalText;
 
     @FXML
@@ -52,17 +56,18 @@ public class LIstCredits implements Initializable {
 
     @FXML
     private Button PaiementBtn;
-    protected static boolean payment;
+    @FXML
+    private TextField paymentTF;
 
     @FXML
     void nouveauCredit(ActionEvent event) throws IOException {
-        payment = false;
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("Montant.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 449, 112);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
+        new CreditService().insert(
+                new Credit(null,
+                        ListClients.selectedClient.getId(),
+                        Double.parseDouble(creditTF.getText()),
+                        new Date())
+        );
+        refresh();
     }
 
     @FXML
@@ -72,24 +77,27 @@ public class LIstCredits implements Initializable {
 
     @FXML
     void paiement(ActionEvent event) throws IOException {
-        payment = true;
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("Montant.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 449, 112);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
+        new CreditService().insert(
+                new Credit(null,
+                        ListClients.selectedClient.getId(),
+                        -Double.parseDouble(paymentTF.getText()),
+                        new Date())
+        );
+        refresh();
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        CreditService credits = new CreditService();
-        List<Credit> listCredits = credits.findByClientId(ListClients.selectedClient.getId(), null, null);
 
         nomText.setText(ListClients.selectedClient.getFullName());
         numtelText.setText(ListClients.selectedClient.getPhoneNumber());
-        totalText.setText(String.valueOf(listCredits.stream().mapToDouble(credit -> credit.getAmount()).sum()));
         maxText.setText(String.valueOf(ListClients.selectedClient.getMax()));
+        refresh();
+    }
+    private void refresh() {
+        CreditService credits = new CreditService();
+        List<Credit> listCredits = credits.findByClientId(ListClients.selectedClient.getId(), null, null);
+        totalText.setText(String.valueOf(listCredits.stream().mapToDouble(credit -> credit.getAmount()).sum()));
         listCreditView.getItems().clear();
         listCreditView.getItems().setAll(listCredits);
         listCreditView.refresh();
