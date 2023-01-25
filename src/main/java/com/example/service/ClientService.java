@@ -15,7 +15,8 @@ public class ClientService implements Service<Client> {
                 CREATE TABLE IF NOT EXISTS `clients` (
                 	id integer PRIMARY KEY,
                 	fullName text NOT NULL,
-                	phoneNumber text NOT NULL
+                	phoneNumber text NOT NULL,
+                	maxAmount double
                 );""";
 
         try (Statement stmt = connection.createStatement()) {
@@ -31,14 +32,15 @@ public class ClientService implements Service<Client> {
     public Boolean insert(Client instance) {
         try {
             String req = "INSERT INTO `clients` ("
-                    + "`id`, `fullname`, `phoneNumber`"
+                    + "`id`, `fullname`, `phoneNumber`, `maxAmount`"
                     + ") VALUES ("
-                    + "?, ?, ?"
+                    + "?, ?, ?, ?"
                     + ");";
             PreparedStatement ps = connection.prepareStatement(req);
             ps.setObject(1, instance.getId(), java.sql.Types.INTEGER);
             ps.setString(2, instance.getFullName());
             ps.setString(3, instance.getPhoneNumber());
+            ps.setDouble(4, instance.getMax());
 
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
@@ -65,7 +67,8 @@ public class ClientService implements Service<Client> {
                 l.add(new Client(
                         rs.getObject("id", Integer.class),
                         rs.getString("fullName"),
-                        rs.getString("phoneNumber")
+                        rs.getString("phoneNumber"),
+                        rs.getDouble("maxAmount")
                 ));
             }
         } catch (SQLException e) {
@@ -85,7 +88,8 @@ public class ClientService implements Service<Client> {
                 return new Client(
                         rs.getObject("id", Integer.class),
                         rs.getString("fullName"),
-                        rs.getString("phoneNumber")
+                        rs.getString("phoneNumber"),
+                        rs.getDouble("maxAmount")
                 );
             }
         } catch (SQLException e) {
@@ -112,7 +116,8 @@ public class ClientService implements Service<Client> {
                 l.add(new Client(
                         rs.getObject("id", Integer.class),
                         rs.getString("fullName"),
-                        rs.getString("phoneNumber")
+                        rs.getString("phoneNumber"),
+                        rs.getDouble("maxAmount")
                 ));
             }
         } catch (SQLException e) {
@@ -139,7 +144,8 @@ public class ClientService implements Service<Client> {
                 l.add(new Client(
                         rs.getObject("id", Integer.class),
                         rs.getString("fullName"),
-                        rs.getString("phoneNumber")
+                        rs.getString("phoneNumber"),
+                        rs.getDouble("maxAmount")
                 ));
             }
         } catch (SQLException e) {
@@ -153,12 +159,13 @@ public class ClientService implements Service<Client> {
     public Boolean modify(Client instance) {
         try {
             String req = "UPDATE `clients` SET "
-                    + "`fullName`=?, `phoneNumber`=? WHERE `id`=" + instance.getId();
+                    + "`fullName`=?, `phoneNumber`=?, `maxAmount`=? WHERE `id`=" + instance.getId();
             req += ";";
             PreparedStatement ps = connection.prepareStatement(req);
             ps.setObject(1, instance.getId(), java.sql.Types.INTEGER);
             ps.setString(2, instance.getFullName());
             ps.setString(3, instance.getPhoneNumber());
+            ps.setDouble(4, instance.getMax());
 
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {

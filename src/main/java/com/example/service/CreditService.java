@@ -56,7 +56,7 @@ public class CreditService implements Service<Credit> {
             if (offset != null) {
                 req += " OFFSET " + offset;
             }
-            req += ";";
+            req += "ORDER BY `date` DESC;";
             Statement s = connection.createStatement();
             ResultSet rs = s.executeQuery(req);
             while (rs.next()) {
@@ -84,7 +84,7 @@ public class CreditService implements Service<Credit> {
             if (offset != null) {
                 req += " OFFSET " + offset;
             }
-            req += ";";
+            req += "ORDER BY `date` DESC;";
             Statement s = connection.createStatement();
             ResultSet rs = s.executeQuery(req);
             while (rs.next()) {

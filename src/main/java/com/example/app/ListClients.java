@@ -22,6 +22,9 @@ import java.util.ResourceBundle;
 public class ListClients implements Initializable {
     protected static Client selectedClient;
     @FXML
+    private Button HistoriqueBtn;
+
+    @FXML
     private Button chercherBtn;
 
     @FXML
@@ -51,6 +54,11 @@ public class ListClients implements Initializable {
 
     @FXML
     private Button voirClientBtn;
+
+    @FXML
+    void historique(ActionEvent event) {
+
+    }
 
     @FXML
     void chercherClient(ActionEvent event) {

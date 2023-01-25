@@ -39,6 +39,19 @@ public class Client extends Observable {
         this.phoneNumber.set(phoneNumber);
     }
 
+    private SimpleDoubleProperty max;
+    public double getMax() {
+        return max.get();
+    }
+
+    public SimpleDoubleProperty maxProperty() {
+        return max;
+    }
+
+    public void setMax(double max) {
+        this.max.set(max);
+    }
+
     public double getTotalCredits() {
         return new CreditService().findByClientId(this.getId(), null, null)
                 .stream().mapToDouble(credit -> credit.getAmount()).sum();
@@ -47,9 +60,10 @@ public class Client extends Observable {
         return new SimpleDoubleProperty(this.getTotalCredits());
     }
 
-    public Client(Integer id, String fullName, String phoneNumber) {
+    public Client(Integer id, String fullName, String phoneNumber, Double max) {
         this.id = id;
         this.fullName = new SimpleStringProperty(fullName);
         this.phoneNumber = new SimpleStringProperty(phoneNumber);
+        this.max = new SimpleDoubleProperty(max);
     }
 }

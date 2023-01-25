@@ -1,10 +1,14 @@
 package com.example.app;
 
+import com.example.entity.Credit;
+import com.example.service.CreditService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+
+import java.util.Date;
 
 public class Montant {
 
@@ -24,7 +28,9 @@ public class Montant {
 
     @FXML
     void valider(ActionEvent event) {
-
+        new CreditService().insert(
+                new Credit(null, null, Double.parseDouble(montantField.getText()), new Date())
+        );
     }
 
 }
