@@ -5,9 +5,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane fx:id="moidefMaxPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="112.0" prefWidth="449.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.control.Label?>
+<?import java.awt.Font?>
+<AnchorPane fx:id="modifMaxPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="112.0" prefWidth="449.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.ModifMaxController">
    <children>
       <TextField fx:id="ModifMax" layoutX="107.0" layoutY="42.0" onAction="#modifMax" prefHeight="29.0" prefWidth="179.0" />
       <Button fx:id="ValiderBtn" layoutX="359.0" layoutY="42.0" mnemonicParsing="false" onAction="#valider" text="Valider" />
+      <Label layoutX="14.0" layoutY="52.0" text="Max :">
+
+      </Label>
+
    </children>
 </AnchorPane>
