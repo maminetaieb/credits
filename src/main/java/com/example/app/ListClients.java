@@ -8,11 +8,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -91,8 +93,18 @@ public class ListClients implements Initializable {
     }
 
     @FXML
-    void nouveauClient(ActionEvent event) {
-
+    void nouveauClient(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("CreateClient.fxml"));
+        /*
+         * if "fx:controller" is not set in fxml
+         * fxmlLoader.setController(NewWindowController);
+         */
+        Scene scene = new Scene(fxmlLoader.load(), 630, 400);
+        Stage stage = new Stage();
+        stage.setTitle("Création Client");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
