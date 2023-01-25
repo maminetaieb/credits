@@ -58,7 +58,14 @@ public class ListClients implements Initializable {
     private Button voirClientBtn;
 
     @FXML
-    void historique(ActionEvent event) {
+    void historique(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("Historique.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 522, 631);
+        Stage stage = new Stage();
+        stage.setTitle("Historique");
+        stage.setScene(scene);
+        stage.show();
 
     }
 

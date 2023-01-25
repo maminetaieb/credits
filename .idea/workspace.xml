@@ -9,14 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="sdsdfsdfsdf">
+    <list default="true" id="ab513df3-c5ff-4007-a81f-1b15127950f8" name="Changes" comment="sdsdfsdfsdf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/CreateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/CreateClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/LIstCredits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/LIstCredits.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/ListClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/ListClients.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/Montant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/Montant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/LIstCredits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/LIstCredits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/ListClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/ListClients.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
