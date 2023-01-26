@@ -24,7 +24,10 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class LIstCredits implements Initializable {
-
+    @FXML
+    private TextField ModifMax;
+    @FXML
+    private Button ModifBtn;
     @FXML
     private Text CreditsText;
 
@@ -61,6 +64,7 @@ public class LIstCredits implements Initializable {
     @FXML
     private TextField paymentTF;
 
+
     @FXML
     void nouveauCredit(ActionEvent event) throws IOException {
         if (!creditTF.getText().isBlank()) {
@@ -80,6 +84,37 @@ public class LIstCredits implements Initializable {
             creditTF.setText("");
         }
     }
+    @FXML
+    void modifierMax(ActionEvent event) throws IOException {
+
+        if (ModifMax.getText().isBlank()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("champs vide");
+            alert.setContentText("vérifiez le montant");
+            alert.showAndWait();
+        }
+        else if(Main.selectedClient.getTotalCredits()<=Double.parseDouble(ModifMax.getText())) {
+            Main.selectedClient.setMax(Double.parseDouble(ModifMax.getText()));
+            new ClientService().modify(Main.selectedClient);
+
+
+        }
+
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            // alert.setTitle("Information Dialog");
+            alert.setHeaderText(null);
+            alert.setContentText("Le montant ajouté est inférieur au total des crédits du client");
+
+            alert.showAndWait();
+
+        }
+        ModifMax.setText("");
+        refresh();
+
+    }
+
 
     @FXML
     void supprimerClient(ActionEvent event) throws IOException {
@@ -117,7 +152,6 @@ public class LIstCredits implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         nomText.setText(Main.selectedClient.getFullName());
         numtelText.setText(Main.selectedClient.getPhoneNumber());
-        maxText.setText(String.valueOf(Main.selectedClient.getMax()));
         refresh();
         creditTF.textProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -137,6 +171,15 @@ public class LIstCredits implements Initializable {
                 }
             }
         });
+        ModifMax.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    ModifMax.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
     }
     private void refresh() {
         CreditService credits = new CreditService();
@@ -145,6 +188,7 @@ public class LIstCredits implements Initializable {
         listCreditView.getItems().clear();
         listCreditView.getItems().setAll(listCredits);
         listCreditView.refresh();
+        maxText.setText(String.valueOf(Main.selectedClient.getMax()));
     }
 
     @FXML
