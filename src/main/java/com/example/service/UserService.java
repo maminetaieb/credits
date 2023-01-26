@@ -95,7 +95,7 @@ public class UserService implements Service<User> {
     public Boolean modify(User instance) {
         try {
             String req = "UPDATE `users` SET "
-                    + "`login`=?, `password`=? WHERE `login`=" + instance.getLogin();
+                    + "`login`=?, `password`=? WHERE `login` LIKE '" + instance.getLogin()+"'";
             req += ";";
             PreparedStatement ps = connection.prepareStatement(req);
             ps.setString(1, instance.getLogin());
@@ -110,7 +110,7 @@ public class UserService implements Service<User> {
     @Override
     public Boolean delete(User instance) {
         try {
-            String req = "DELETE FROM `user` WHERE `login`="+instance.getLogin();
+            String req = "DELETE FROM `users` WHERE `login` LIKE '"+instance.getLogin() +"'";
             req += ";";
             Statement s = connection.createStatement();
 

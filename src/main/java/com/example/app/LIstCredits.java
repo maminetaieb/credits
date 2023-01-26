@@ -68,18 +68,25 @@ public class LIstCredits implements Initializable {
     @FXML
     void nouveauCredit(ActionEvent event) throws IOException {
         if (!creditTF.getText().isBlank()) {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Ajouter Credit");
-            alert.setContentText("Voulez vous vraiment ajouter ce credit au client?");
-            Optional<ButtonType> result = alert.showAndWait();
-            if (result.isPresent() && result.get() == ButtonType.OK) {
-                new CreditService().insert(
-                        new Credit(null,
-                                Main.selectedClient.getId(),
-                                Double.parseDouble(creditTF.getText()),
-                                new Date())
-                );
-                refresh();
+            if (Double.parseDouble(creditTF.getText()) + Main.selectedClient.getTotalCredits() > Main.selectedClient.getMax()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Credit depasse le montant maximal");
+                alert.setContentText("Veuillez entrer un montant valide");
+                alert.show();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Ajouter Credit");
+                alert.setContentText("Voulez vous vraiment ajouter ce credit au client?");
+                Optional<ButtonType> result = alert.showAndWait();
+                if (result.isPresent() && result.get() == ButtonType.OK) {
+                    new CreditService().insert(
+                            new Credit(null,
+                                    Main.selectedClient.getId(),
+                                    Double.parseDouble(creditTF.getText()),
+                                    new Date())
+                    );
+                    refresh();
+                }
             }
             creditTF.setText("");
         }
