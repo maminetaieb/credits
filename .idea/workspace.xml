@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment=" v">
+    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="jnnjgnjbnjgnjbnjgnjb">
+      <change afterPath="$PROJECT_DIR$/out/artifacts/app_jar/app.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/app_jar/test.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +91,7 @@
       <workItem from="1674504214558" duration="7985000" />
       <workItem from="1674578240307" duration="5431000" />
       <workItem from="1674585414919" duration="957000" />
-      <workItem from="1674770882578" duration="629000" />
+      <workItem from="1674770882578" duration="906000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1674583071513</created>
@@ -168,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674696914548</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="jnnjgnjbnjgnjbnjgnjb">
+      <created>1674771750232</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674771750232</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +206,8 @@
     <MESSAGE value="dddd" />
     <MESSAGE value="dddddddddddddddddddddwwwwwwwwwwwwwwwwww" />
     <MESSAGE value="Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
+    <MESSAGE value="jnnjgnjbnjgnjbnjgnjb" />
+    <option name="LAST_COMMIT_MESSAGE" value="jnnjgnjbnjgnjbnjgnjb" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/credits$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1674672389478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
