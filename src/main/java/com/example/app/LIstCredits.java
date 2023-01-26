@@ -70,10 +70,10 @@ public class LIstCredits implements Initializable {
         if (!creditTF.getText().isBlank()) {
             if (Double.parseDouble(creditTF.getText()) + Main.selectedClient.getTotalCredits() > Main.selectedClient.getMax()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Credit depasse le montant maximal");
-                alert.setContentText("Veuillez entrer un montant valide");
+                alert.setTitle("Montant Invalide");
+                alert.setContentText("Credit depasse le montant maximal");
                 alert.show();
-            } else {
+            } else if((Double.parseDouble(creditTF.getText())>0)){
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Ajouter Credit");
                 alert.setContentText("Voulez vous vraiment ajouter ce credit au client?");
@@ -137,7 +137,7 @@ public class LIstCredits implements Initializable {
 
     @FXML
     void paiement(ActionEvent event) throws IOException {
-        if (!paymentTF.getText().isBlank()) {
+        if (!paymentTF.getText().isBlank()&&(Main.selectedClient.getTotalCredits()>=Double.parseDouble(paymentTF.getText()))&&(Double.parseDouble(paymentTF.getText())>0)) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Ajouter Paiement");
             alert.setContentText("Voulez vous vraiment ajouter ce paiement au client?");
@@ -153,7 +153,14 @@ public class LIstCredits implements Initializable {
             }
             paymentTF.setText("");
         }
-    }
+        else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Montant Invalide");
+            alert.setContentText("Verifiez le montant");
+            alert.showAndWait();
+        }
+        }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
