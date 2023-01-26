@@ -2,15 +2,21 @@ package com.example.app;
 
 import com.example.entity.Client;
 import com.example.service.ClientService;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class CreateClient {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class CreateClient implements Initializable {
 
     @FXML
     private Button AjouterClientBtn;
@@ -29,11 +35,11 @@ public class CreateClient {
 
     @FXML
     void ajouterClient(ActionEvent event) {
-        if((nomField.getText().isBlank())|| (numTelField.getText().isBlank()) || (maxField.getText().isBlank())){
+        if((nomField.getText().isBlank())|| (numTelField.getText().isBlank()) || numTelField.getText().length() != 8 || (maxField.getText().isBlank()) || Double.parseDouble(maxField.getText()) < 0){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("failed!");
             alert.setHeaderText(null);
-            alert.setContentText("svp remplissez tous les champs");
+            alert.setContentText("Verifier les champs");
 
             alert.showAndWait();
         }
@@ -67,4 +73,25 @@ public class CreateClient {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        numTelField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    numTelField.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
+        maxField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    maxField.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
+    }
 }

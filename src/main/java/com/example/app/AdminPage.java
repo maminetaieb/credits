@@ -1,11 +1,16 @@
 package com.example.app;
 
+import com.example.entity.User;
+import com.example.service.UserService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class AdminPage {
 
@@ -28,8 +33,10 @@ public class AdminPage {
     private PasswordField passField;
 
     @FXML
-    void createUser(ActionEvent event) {
-
+    void createUser(ActionEvent event) throws IOException {
+        new UserService().insert(new User(nameField.getText(), passField.getText()));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        AdminPane.getChildren().setAll(pane);
     }
 
     @FXML
@@ -38,8 +45,9 @@ public class AdminPage {
     }
 
     @FXML
-    void logout(ActionEvent event) {
-
+    void logout(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        AdminPane.getChildren().setAll(pane);
     }
 
 }

@@ -51,6 +51,6 @@ public class Credit {
 
     @Override
     public String toString() {
-        return new ClientService().findOne(this.getClientId()).getFullName() + (amount > 0 ? "credit " : "paiement ") + Math.abs(amount) + " a " + date;
+        return new ClientService().findOne(this.getClientId()).getFullName() + (amount > 0 ? " a pris un credit de " : " a payé ") + Math.abs(amount) + " DT le " + date;
     }
 }

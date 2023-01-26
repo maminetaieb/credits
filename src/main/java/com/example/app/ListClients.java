@@ -2,6 +2,7 @@ package com.example.app;
 
 import com.example.entity.Client;
 import com.example.service.ClientService;
+import com.example.util.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -22,7 +23,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ListClients implements Initializable {
-    protected static Client selectedClient;
     @FXML
     private Button HistoriqueBtn;
 
@@ -116,8 +116,8 @@ public class ListClients implements Initializable {
 
     @FXML
     void voirClient(ActionEvent event) throws IOException {
-        selectedClient = listClient.getSelectionModel().getSelectedItem();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("ListCredits.fxml"));
+        Main.selectedClient = listClient.getSelectionModel().getSelectedItem();
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("LIstCredits.fxml"));
         listClientPane.getChildren().setAll(pane);
     }
 
@@ -134,5 +134,10 @@ public class ListClients implements Initializable {
         );
         listClient.getColumns().setAll(nomC, numTelC, creditsC);
         chercherClient(null);
+    }
+    @FXML
+    void disconnect(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        listClientPane.getChildren().setAll(pane);
     }
 }

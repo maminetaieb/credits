@@ -74,15 +74,18 @@ public class CreditService implements Service<Credit> {
         return l;
     }
 
-    public List<Credit> findByDate(java.sql.Date startDate, java.sql.Date endDate) {
+    public List<Credit> findByDate(Date startDate, Date endDate) {
         List<Credit> l = new ArrayList<>();
         try {
             String req = "SELECT * FROM `credits`";
             if (startDate != null) {
-                req += " WHERE `date`>= "+startDate;
+                req += " WHERE `date` >= '"+startDate+"'";
             }
             if (endDate != null) {
-                req += " WHERE `date`<= "+endDate;
+                if (startDate == null)
+                    req += " WHERE `date` <= '"+endDate+"'";
+                else
+                    req += " AND `date` <= '"+endDate+"'";
             }
             req += " ORDER BY `date` DESC;";
             Statement s = connection.createStatement();

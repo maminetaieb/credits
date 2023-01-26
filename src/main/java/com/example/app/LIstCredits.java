@@ -3,6 +3,7 @@ package com.example.app;
 import com.example.entity.Credit;
 import com.example.service.ClientService;
 import com.example.service.CreditService;
+import com.example.util.Main;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -70,7 +71,7 @@ public class LIstCredits implements Initializable {
             if (result.isPresent() && result.get() == ButtonType.OK) {
                 new CreditService().insert(
                         new Credit(null,
-                                ListClients.selectedClient.getId(),
+                                Main.selectedClient.getId(),
                                 Double.parseDouble(creditTF.getText()),
                                 new Date())
                 );
@@ -85,8 +86,8 @@ public class LIstCredits implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         Optional<ButtonType> result = alert.showAndWait();
         if (result.isPresent() && result.get() == ButtonType.OK) {
-            new ClientService().delete(ListClients.selectedClient);
-            ListClients.selectedClient = null;
+            new ClientService().delete(Main.selectedClient);
+            Main.selectedClient = null;
             AnchorPane pane = FXMLLoader.load(getClass().getResource("ListClients.fxml"));
             ListCreditsPane.getChildren().setAll(pane);
         }
@@ -102,7 +103,7 @@ public class LIstCredits implements Initializable {
             if (result.isPresent() && result.get() == ButtonType.OK) {
                 new CreditService().insert(
                         new Credit(null,
-                                ListClients.selectedClient.getId(),
+                                Main.selectedClient.getId(),
                                 -Double.parseDouble(paymentTF.getText()),
                                 new Date())
                 );
@@ -114,9 +115,9 @@ public class LIstCredits implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        nomText.setText(ListClients.selectedClient.getFullName());
-        numtelText.setText(ListClients.selectedClient.getPhoneNumber());
-        maxText.setText(String.valueOf(ListClients.selectedClient.getMax()));
+        nomText.setText(Main.selectedClient.getFullName());
+        numtelText.setText(Main.selectedClient.getPhoneNumber());
+        maxText.setText(String.valueOf(Main.selectedClient.getMax()));
         refresh();
         creditTF.textProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -139,7 +140,7 @@ public class LIstCredits implements Initializable {
     }
     private void refresh() {
         CreditService credits = new CreditService();
-        List<Credit> listCredits = credits.findByClientId(ListClients.selectedClient.getId(), null, null);
+        List<Credit> listCredits = credits.findByClientId(Main.selectedClient.getId(), null, null);
         totalText.setText(String.valueOf(listCredits.stream().mapToDouble(credit -> credit.getAmount()).sum()));
         listCreditView.getItems().clear();
         listCreditView.getItems().setAll(listCredits);
@@ -148,7 +149,7 @@ public class LIstCredits implements Initializable {
 
     @FXML
     void goToListeClients(ActionEvent event) throws IOException {
-        ListClients.selectedClient = null;
+        Main.selectedClient = null;
         AnchorPane pane = FXMLLoader.load(getClass().getResource("ListClients.fxml"));
         ListCreditsPane.getChildren().setAll(pane);
     }
