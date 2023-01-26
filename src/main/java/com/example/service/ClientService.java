@@ -162,10 +162,9 @@ public class ClientService implements Service<Client> {
                     + "`fullName`=?, `phoneNumber`=?, `maxAmount`=? WHERE `id`=" + instance.getId();
             req += ";";
             PreparedStatement ps = connection.prepareStatement(req);
-            ps.setObject(1, instance.getId(), java.sql.Types.INTEGER);
-            ps.setString(2, instance.getFullName());
-            ps.setString(3, instance.getPhoneNumber());
-            ps.setDouble(4, instance.getMax());
+            ps.setString(1, instance.getFullName());
+            ps.setString(2, instance.getPhoneNumber());
+            ps.setDouble(3, instance.getMax());
 
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
