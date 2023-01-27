@@ -9,16 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="last final">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/ClientArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/ArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/ClientArticleService.java" afterDir="false" />
+    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="ininininininregaregrgwaefwefawefwefweafweaf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/app_jar/app.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/app_jar/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/app_jar/test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/util/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/ModifierClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/ModifierClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/ClientArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/ClientArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/app/ModifierClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/app/ModifierClient.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +98,7 @@
       <workItem from="1674775452124" duration="189000" />
       <workItem from="1674777475915" duration="524000" />
       <workItem from="1674779005592" duration="256000" />
-      <workItem from="1674851603772" duration="3446000" />
+      <workItem from="1674851603772" duration="9020000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1674583071513</created>
@@ -244,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674777708836</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="ininininininregaregrgwaefwefawefwefweafweaf">
+      <created>1674857127470</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1674857127470</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +285,8 @@
     <MESSAGE value="finally" />
     <MESSAGE value="dfvdf" />
     <MESSAGE value="last final" />
-    <option name="LAST_COMMIT_MESSAGE" value="last final" />
+    <MESSAGE value="ininininininregaregrgwaefwefawefwefweafweaf" />
+    <option name="LAST_COMMIT_MESSAGE" value="ininininininregaregrgwaefwefawefwefweafweaf" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/credits$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1674672389478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

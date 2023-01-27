@@ -1,5 +1,7 @@
 package com.example.entity;
 
+import javafx.beans.property.SimpleDoubleProperty;
+
 public class ClientArticle {
     private Integer clientId;
     public Integer getClientId() {
@@ -19,18 +21,22 @@ public class ClientArticle {
         this.articleId = articleId;
     }
 
-    private Double customPrice;
-    public Double getCustomPrice() {
+    private SimpleDoubleProperty customPrice;
+    public double getCustomPrice() {
+        return customPrice.get();
+    }
+
+    public SimpleDoubleProperty customPriceProperty() {
         return customPrice;
     }
 
-    public void setCustomPrice(Double customPrice) {
-        this.customPrice = customPrice;
+    public void setCustomPrice(double customPrice) {
+        this.customPrice.set(customPrice);
     }
 
     public ClientArticle(Integer clientId, Integer articleId, Double customPrice) {
         this.clientId = clientId;
         this.articleId = articleId;
-        this.customPrice = customPrice;
+        this.customPrice = new SimpleDoubleProperty(customPrice);
     }
 }

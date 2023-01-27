@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.entity.Article;
+import com.example.entity.Client;
 import com.example.entity.Credit;
 
 import java.sql.*;
@@ -71,6 +72,26 @@ public class ArticleService implements Service<Article> {
         }
 
         return l;
+    }
+
+    public Article findOne(Integer id) {
+        try {
+            String req = "SELECT * FROM `articles` WHERE `id`="+id;
+            req += ";";
+            Statement s = connection.createStatement();
+            ResultSet rs = s.executeQuery(req);
+            if (rs.next()) {
+                return new Article(
+                        rs.getObject("id", Integer.class),
+                        rs.getString("title"),
+                        rs.getDouble("defaultPrice")
+                );
+            }
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+
+        return null;
     }
 
     @Override
