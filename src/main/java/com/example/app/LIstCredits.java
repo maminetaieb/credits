@@ -97,32 +97,6 @@ public class LIstCredits implements Initializable {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("ModifierClient.fxml"));
             ListCreditsPane.getChildren().setAll(pane);
         }
-       /* if (ModifMax.getText().isBlank()) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("champs vide");
-            alert.setContentText("vérifiez le montant");
-            alert.showAndWait();
-        }
-        else if(Main.selectedClient.getTotalCredits()<=Double.parseDouble(ModifMax.getText())) {
-            Main.selectedClient.setMax(Double.parseDouble(ModifMax.getText()));
-            new ClientService().modify(Main.selectedClient);
-
-
-        }
-
-        else
-        {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            // alert.setTitle("Information Dialog");
-            alert.setHeaderText(null);
-            alert.setContentText("Le montant ajouté est inférieur au total des crédits du client");
-
-            alert.showAndWait();
-
-        }
-        ModifMax.setText("");
-        refresh();
-*/
     }
 
 
