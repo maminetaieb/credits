@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="AdminPane" prefHeight="467.0" prefWidth="697.0" style="-fx-background-color: #3c3c3c;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.AdminPage">
+<AnchorPane fx:id="AdminPane" prefHeight="503.0" prefWidth="765.0" style="-fx-background-color: #3c3c3c;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.AdminPage">
    <children>
       <Button fx:id="CreateUserBtn" layoutX="186.0" layoutY="284.0" mnemonicParsing="false" onAction="#createUser" prefHeight="52.0" prefWidth="181.0" style="-fx-background-color: #86d300;" text="Create New User" textFill="WHITE">
          <font>
