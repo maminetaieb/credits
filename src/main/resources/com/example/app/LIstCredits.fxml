@@ -42,7 +42,7 @@
             <Font name="Calibri" size="23.0" />
          </font>
       </Text>
-      <TextField fx:id="creditTF" layoutX="504.0" layoutY="266.0" prefHeight="0.0" prefWidth="69.0" />
+      <TextField fx:id="QuantiteField" layoutX="504.0" layoutY="266.0" prefHeight="0.0" prefWidth="69.0" />
       <TextField fx:id="paymentTF" layoutX="176.0" layoutY="533.0" prefHeight="36.0" prefWidth="157.0" />
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToListeClients" text="Voir liste clients" />
       <Button fx:id="ModifBtn" layoutX="6.0" layoutY="418.0" mnemonicParsing="false" onAction="#modifierClient" prefHeight="36.0" prefWidth="116.0" text="Modifier" />
@@ -52,5 +52,15 @@
           <TableColumn fx:id="PrixC" minWidth="0.0" prefWidth="111.0" text="Prix" />
         </columns>
       </TableView>
+      <Text layoutX="594.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max : " wrappingWidth="200.13671875">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text fx:id="maxText" layoutX="655.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" wrappingWidth="166.13671875">
+         <font>
+            <Font name="Calibri" size="23.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
