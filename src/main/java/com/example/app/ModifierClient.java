@@ -8,11 +8,13 @@ import com.example.service.ClientService;
 import com.example.util.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.input.MouseEvent;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -96,7 +98,7 @@ public class ModifierClient implements Initializable {
     }
 
     @FXML
-    void validerModification(ActionEvent event) {
+    void validerModification(ActionEvent event) throws IOException {
         if (maxField.getText().isBlank() || nomField.getText().isBlank()) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("champs vide");
@@ -105,16 +107,15 @@ public class ModifierClient implements Initializable {
         } else if(Main.selectedClient.getTotalCredits()<=Double.parseDouble(maxField.getText())) {
             Main.selectedClient.setMax(Double.parseDouble(maxField.getText()));
             new ClientService().modify(Main.selectedClient);
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("ListClients.fxml"));
+            ModifClientPane.getChildren().setAll(pane);
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             // alert.setTitle("Information Dialog");
             alert.setHeaderText(null);
             alert.setContentText("Le montant ajouté est inférieur au total des crédits du client");
-
-            alert.showAndWait();
-
+            alert.show();
         }
-        maxField.setText("");
     }
 
     @FXML

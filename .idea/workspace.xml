@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="dlkf kldlkmf mmkdfl df d df df lknlkdf">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/LIstCredits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/LIstCredits.java" afterDir="false" />
+    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="gggggucv">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/ModifierClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/ModifierClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +94,7 @@
       <workItem from="1674775452124" duration="189000" />
       <workItem from="1674777475915" duration="524000" />
       <workItem from="1674779005592" duration="256000" />
-      <workItem from="1674851603772" duration="9970000" />
+      <workItem from="1674851603772" duration="10250000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1674583071513</created>
@@ -259,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674862904659</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="gggggucv">
+      <created>1674863670837</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1674863670837</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +305,8 @@
     <MESSAGE value="ininininininregaregrgwaefwefawefwefweafweaf" />
     <MESSAGE value="kdmfmk mkd f" />
     <MESSAGE value="dlkf kldlkmf mmkdfl df d df df lknlkdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="dlkf kldlkmf mmkdfl df d df df lknlkdf" />
+    <MESSAGE value="gggggucv" />
+    <option name="LAST_COMMIT_MESSAGE" value="gggggucv" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/credits$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1674672389478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
