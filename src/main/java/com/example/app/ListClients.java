@@ -15,6 +15,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -57,6 +58,7 @@ public class ListClients implements Initializable {
     @FXML
     private Button voirClientBtn;
 
+
     @FXML
     void historique(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -92,6 +94,7 @@ public class ListClients implements Initializable {
         listClient.getItems().clear();
         listClient.getItems().addAll(listData);
         listClient.refresh();
+
     }
 
     @FXML

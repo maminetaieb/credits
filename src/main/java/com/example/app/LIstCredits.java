@@ -92,9 +92,12 @@ public class LIstCredits implements Initializable {
         }
     }
     @FXML
-    void modifierMax(ActionEvent event) throws IOException {
-
-        if (ModifMax.getText().isBlank()) {
+    void modifierClient(ActionEvent event) throws IOException {
+        {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("ModifierClient.fxml"));
+            ListCreditsPane.getChildren().setAll(pane);
+        }
+       /* if (ModifMax.getText().isBlank()) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("champs vide");
             alert.setContentText("vérifiez le montant");
@@ -119,7 +122,7 @@ public class LIstCredits implements Initializable {
         }
         ModifMax.setText("");
         refresh();
-
+*/
     }
 
 

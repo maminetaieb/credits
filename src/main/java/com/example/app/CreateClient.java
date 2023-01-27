@@ -35,7 +35,7 @@ public class CreateClient implements Initializable {
 
     @FXML
     void ajouterClient(ActionEvent event) {
-        if((nomField.getText().isBlank())|| (numTelField.getText().isBlank()) || numTelField.getText().length() != 8 || (maxField.getText().isBlank()) || Double.parseDouble(maxField.getText()) < 0){
+        if((nomField.getText().isBlank())||  (maxField.getText().isBlank()) || Double.parseDouble(maxField.getText()) < 0){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("failed!");
             alert.setHeaderText(null);

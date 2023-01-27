@@ -31,8 +31,8 @@ public class Login {
     void login(ActionEvent event) throws IOException {
         if (nameField.getText().equals("admin") && passField.getText().equals("F@goçytoSe")) {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("AdminPage.fxml"));
+            loginPane.getChildren().setAll(pane);
 
- 
         } else if (new UserService().authenticate(nameField.getText(), passField.getText()) != null) {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("ListClients.fxml"));
             loginPane.getChildren().setAll(pane);
