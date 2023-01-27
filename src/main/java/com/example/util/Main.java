@@ -2,10 +2,7 @@ package com.example.util;
 
 import com.example.app.HelloApplication;
 import com.example.entity.Client;
-import com.example.service.ClientArticleService;
-import com.example.service.ClientService;
-import com.example.service.CreditService;
-import com.example.service.UserService;
+import com.example.service.*;
 
 public class Main {
     public static Client selectedClient;
@@ -13,6 +10,7 @@ public class Main {
         new UserService().initialize();
         new ClientService().initialize();
         new CreditService().initialize();
+        new ArticleService().initialize();
         new ClientArticleService().initialize();
         HelloApplication.main(args);
     }
