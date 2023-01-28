@@ -9,6 +9,24 @@ public class Credit {
     private Integer clientId;
     private Double amount;
     private Date date;
+    private String message;
+
+    public Credit(Integer id, Integer clientId, Double amount, String message,Date date) {
+        this.id = id;
+        this.clientId = clientId;
+        this.amount = amount;
+
+        this.message = message;
+        this.date = date;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public Integer getId() {
         return id;
@@ -42,15 +60,9 @@ public class Credit {
         this.date = date;
     }
 
-    public Credit(Integer id, Integer clientId, Double amount, Date date) {
-        this.id = id;
-        this.clientId = clientId;
-        this.amount = amount;
-        this.date = date;
-    }
 
     @Override
     public String toString() {
-        return new ClientService().findOne(this.getClientId()).getFullName() + (amount > 0 ? " a pris un credit de " : " a payé ") + Math.abs(amount) + " DT le " + date;
+        return new ClientService().findOne(this.getClientId()).getFullName() + (amount > 0 ? " a pris un credit de " : " a payé ") + Math.abs(amount) + " DT " +getMessage()+ " le " + date;
     }
 }
