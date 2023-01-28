@@ -128,7 +128,7 @@ public class ModifierClient implements Initializable {
         if (cca == null) {
             ModifPrixBtn.setText("Modifier Prix");
         } else if (PrixField.getText().isBlank()) {
-            ModifPrixBtn.setText("Set Default");
+            ModifPrixBtn.setText("Prix Standard");
         }
         ModifPrixBtn.setDisable(false);
         PrixField.setDisable(false);

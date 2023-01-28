@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="dsf">
+    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="finallsldmvkmkf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/ModifierClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/ModifierClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/ClientService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mdaet\IdeaProjects\credits\src\main\resources\com\example\app" />
@@ -47,7 +63,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.util.Main" />
-      <module name="credits2.0" />
+      <module name="app" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.util.*" />
@@ -80,7 +96,7 @@
       <workItem from="1674775452124" duration="189000" />
       <workItem from="1674777475915" duration="524000" />
       <workItem from="1674779005592" duration="256000" />
-      <workItem from="1674851603772" duration="12844000" />
+      <workItem from="1674851603772" duration="13771000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1674583071513</created>
@@ -278,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674865133147</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="finallsldmvkmkf">
+      <created>1674866819106</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1674866819106</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +319,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="xmlsdgsfgfdg" />
     <MESSAGE value="ssdfsdf" />
     <MESSAGE value="ggg" />
     <MESSAGE value="user" />
@@ -321,7 +343,8 @@
     <MESSAGE value="lkndlkfn jdf" />
     <MESSAGE value="dsf" />
     <MESSAGE value="dsfdklm lkmdfkml dnlf knldf" />
-    <option name="LAST_COMMIT_MESSAGE" value="dsfdklm lkmdfkml dnlf knldf" />
+    <MESSAGE value="finallsldmvkmkf" />
+    <option name="LAST_COMMIT_MESSAGE" value="finallsldmvkmkf" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/credits$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1674672389478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
