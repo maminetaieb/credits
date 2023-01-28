@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="ListCreditsPane" prefHeight="651.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.LIstCredits">
+<AnchorPane fx:id="ListCreditsPane" prefHeight="651.0" prefWidth="963.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.LIstCredits">
    <children>
       <ImageView fitHeight="94.0" fitWidth="99.0" layoutX="27.0" layoutY="124.0">
          <image>
@@ -23,8 +23,8 @@
             <Font name="Calibri Bold" size="23.0" />
          </font>
       </Text>
-      <ListView fx:id="listCreditView" layoutX="577.0" layoutY="80.0" prefHeight="437.0" prefWidth="345.0" />
-      <Button fx:id="NouveaCreditBtn" layoutX="508.0" layoutY="313.0" mnemonicParsing="false" onAction="#nouveauCredit" prefHeight="26.0" prefWidth="61.0" text="Valider" />
+      <ListView fx:id="listCreditView" layoutX="549.0" layoutY="80.0" prefHeight="437.0" prefWidth="409.0" />
+      <Button fx:id="NouveaCreditBtn" layoutX="481.0" layoutY="313.0" mnemonicParsing="false" onAction="#nouveauCredit" prefHeight="26.0" prefWidth="61.0" text="Valider" />
       <Button fx:id="SupprimerClientBtn" layoutX="6.0" layoutY="339.0" mnemonicParsing="false" onAction="#supprimerClient" prefHeight="36.0" prefWidth="116.0" text="Supprimer Client" />
       <Text fx:id="nomText" layoutX="13.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amine Taieb" wrappingWidth="200.13671875">
          <font>
@@ -42,11 +42,11 @@
             <Font name="Calibri" size="23.0" />
          </font>
       </Text>
-      <TextField fx:id="QuantiteField" layoutX="504.0" layoutY="266.0" prefHeight="0.0" prefWidth="69.0" />
+      <TextField fx:id="QuantiteField" layoutX="477.0" layoutY="266.0" prefHeight="0.0" prefWidth="69.0" />
       <TextField fx:id="paymentTF" layoutX="176.0" layoutY="533.0" prefHeight="36.0" prefWidth="157.0" />
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToListeClients" text="Voir liste clients" />
       <Button fx:id="ModifBtn" layoutX="6.0" layoutY="418.0" mnemonicParsing="false" onAction="#modifierClient" prefHeight="36.0" prefWidth="116.0" text="Modifier" />
-      <TableView fx:id="ArticleView" layoutX="159.0" layoutY="79.0" prefHeight="437.0" prefWidth="338.0">
+      <TableView fx:id="ArticleView" layoutX="139.0" layoutY="73.0" prefHeight="437.0" prefWidth="338.0">
         <columns>
           <TableColumn fx:id="ArticleC" prefWidth="239.0" text="Nom Article" />
           <TableColumn fx:id="PrixC" minWidth="0.0" prefWidth="111.0" text="Prix" />
