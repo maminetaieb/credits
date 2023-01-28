@@ -79,12 +79,13 @@ public class LIstCredits implements Initializable {
     @FXML
     void nouveauCredit(ActionEvent event) throws IOException {
         if (!QuantiteField.getText().isBlank()) {
-            if (Double.parseDouble(QuantiteField.getText()) + Main.selectedClient.getTotalCredits() > Main.selectedClient.getMax()) {
+            if ((Double.parseDouble(QuantiteField.getText())*ArticleView.getSelectionModel().getSelectedItem().getDefaultPrice()) + Main.selectedClient.getTotalCredits() > Main.selectedClient.getMax()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Montant Invalide");
                 alert.setContentText("Credit depasse le montant maximal");
                 alert.show();
             } else if((Double.parseDouble(QuantiteField.getText())>0)){
+                Double credit=Double.parseDouble(QuantiteField.getText())*ArticleView.getSelectionModel().getSelectedItem().getDefaultPrice();
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Ajouter Credit");
                 alert.setContentText("Voulez vous vraiment ajouter ce credit au client?");
@@ -93,7 +94,7 @@ public class LIstCredits implements Initializable {
                     new CreditService().insert(
                             new Credit(null,
                                     Main.selectedClient.getId(),
-                                    Double.parseDouble(QuantiteField.getText()),
+                                    credit,
                                     new Date())
                     );
                     refresh();

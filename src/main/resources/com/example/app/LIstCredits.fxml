@@ -18,7 +18,7 @@
             <Image url="@../img/pic.png" />
          </image>
       </ImageView>
-      <Text layoutX="13.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :  " wrappingWidth="200.13671875">
+      <Text layoutX="176.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :  " wrappingWidth="200.13671875">
          <font>
             <Font name="Calibri Bold" size="23.0" />
          </font>
@@ -37,7 +37,7 @@
          </font>
       </Text>
       <Button fx:id="PaiementBtn" layoutX="361.0" layoutY="533.0" mnemonicParsing="false" onAction="#paiement" prefHeight="36.0" prefWidth="116.0" text="Paiement" />
-      <Text fx:id="totalText" layoutX="88.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total" wrappingWidth="166.13671875">
+      <Text fx:id="totalText" layoutX="250.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total" wrappingWidth="166.13671875">
          <font>
             <Font name="Calibri" size="23.0" />
          </font>
