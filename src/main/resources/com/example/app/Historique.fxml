@@ -8,7 +8,7 @@
 <AnchorPane fx:id="historiquePane" prefHeight="631.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.Historique">
    <children>
       <ListView fx:id="historiqueView" layoutX="31.0" layoutY="85.0" prefHeight="512.0" prefWidth="457.0" />
-      <Text fx:id="totalCredit" layoutX="390.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total" wrappingWidth="61.13671875">
+      <Text fx:id="totalCredit" layoutX="201.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total" wrappingWidth="230.13671875">
          <font>
             <Font size="22.0" />
          </font>

@@ -12,6 +12,7 @@ public class CreditService implements Service<Credit> {
                 .append("	`id` integer PRIMARY KEY,\n")
                 .append("	`clientId` integer REFERENCES `clients`(`id`) ,\n")
                 .append("	`amount` double NOT NULL,\n")
+                .append("	`message` text ,\n")
                 .append("	`date` date NOT NULL\n")
                 .append(");")
                 .toString();
@@ -29,15 +30,16 @@ public class CreditService implements Service<Credit> {
     public Boolean insert(Credit instance) {
         try {
             String req = "INSERT INTO `credits` ("
-                    + "`id`, `clientId`, `amount`, `date`"
+                    + "`id`, `clientId`, `amount`, `message`,`date`"
                     + ") VALUES ("
-                    + "?, ?, ?, ?"
+                    + "?, ?, ?, ?,?"
                     + ");";
             PreparedStatement ps = connection.prepareStatement(req);
             ps.setObject(1, instance.getId(), java.sql.Types.INTEGER);
             ps.setObject(2, instance.getClientId(), java.sql.Types.INTEGER);
             ps.setDouble(3, instance.getAmount());
-            ps.setDate(4, new Date(instance.getDate().getTime()));
+            ps.setString(4, instance.getMessage());
+            ps.setDate(5, new Date(instance.getDate().getTime()));
 
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
@@ -64,6 +66,7 @@ public class CreditService implements Service<Credit> {
                         rs.getObject("id", Integer.class),
                         rs.getObject("clientId", Integer.class),
                         rs.getDouble("amount"),
+                        rs.getString("message"),
                         rs.getDate("date")
                 ));
             }
@@ -95,6 +98,7 @@ public class CreditService implements Service<Credit> {
                         rs.getObject("id", Integer.class),
                         rs.getObject("clientId", Integer.class),
                         rs.getDouble("amount"),
+                        rs.getString("message"),
                         rs.getDate("date")
                 ));
             }
@@ -123,6 +127,7 @@ public class CreditService implements Service<Credit> {
                         rs.getObject("id", Integer.class),
                         rs.getObject("clientId", Integer.class),
                         rs.getDouble("amount"),
+                        rs.getString("message"),
                         rs.getDate("date")
                 ));
             }

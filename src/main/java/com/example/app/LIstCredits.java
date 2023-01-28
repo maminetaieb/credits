@@ -95,6 +95,7 @@ public class LIstCredits implements Initializable {
                             new Credit(null,
                                     Main.selectedClient.getId(),
                                     credit,
+                                    "("+QuantiteField.getText() +" "+ArticleView.getSelectionModel().getSelectedItem().getTitle()+")"  ,
                                     new Date())
                     );
                     refresh();
@@ -135,7 +136,7 @@ public class LIstCredits implements Initializable {
                 new CreditService().insert(
                         new Credit(null,
                                 Main.selectedClient.getId(),
-                                -Double.parseDouble(paymentTF.getText()),
+                                -Double.parseDouble(paymentTF.getText()),"",
                                 new Date())
                 );
                 refresh();
