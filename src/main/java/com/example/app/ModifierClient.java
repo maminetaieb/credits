@@ -126,7 +126,7 @@ public class ModifierClient implements Initializable {
         ClientArticleService clientArticles = new ClientArticleService();
         cca = clientArticles.findOne(Main.selectedClient.getId(), articleTable.getSelectionModel().getSelectedItem().getId());
         if (cca == null) {
-
+            ModifPrixBtn.setText("Modifier Prix");
         } else if (PrixField.getText().isBlank()) {
             ModifPrixBtn.setText("Set Default");
         }
