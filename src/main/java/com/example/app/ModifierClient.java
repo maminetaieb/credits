@@ -125,7 +125,9 @@ public class ModifierClient implements Initializable {
     void selectArticle(MouseEvent event) {
         ClientArticleService clientArticles = new ClientArticleService();
         cca = clientArticles.findOne(Main.selectedClient.getId(), articleTable.getSelectionModel().getSelectedItem().getId());
-        if (PrixField.getText().isBlank() && cca != null) {
+        if (cca == null) {
+
+        } else if (PrixField.getText().isBlank()) {
             ModifPrixBtn.setText("Set Default");
         }
         ModifPrixBtn.setDisable(false);
