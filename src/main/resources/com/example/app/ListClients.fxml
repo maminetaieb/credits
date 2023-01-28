@@ -26,5 +26,6 @@
          </font>
       </Button>
       <Button fx:id="HistoriqueBtn" layoutX="764.0" layoutY="471.0" mnemonicParsing="false" onAction="#historique" prefHeight="60.0" prefWidth="148.0" text="Voir Historique" />
+      <Button fx:id="NouveauBtn" layoutX="52.0" layoutY="26.0" mnemonicParsing="false" onAction="#nouveauArticle" prefHeight="37.0" prefWidth="106.0" text="Nouveau Article" />
    </children>
 </AnchorPane>

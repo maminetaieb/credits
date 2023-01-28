@@ -57,6 +57,20 @@ public class ListClients implements Initializable {
 
     @FXML
     private Button voirClientBtn;
+    @FXML
+    private Button NouveauBtn;
+
+    @FXML
+    void nouveauArticle(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("AjouterArticle.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 483, 206);
+        Stage stage = new Stage();
+        stage.setTitle("Ajouter Article");
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
 
     @FXML

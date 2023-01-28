@@ -1,6 +1,10 @@
 package com.example.app;
 
+import com.example.entity.Article;
+import com.example.entity.ClientArticle;
 import com.example.entity.Credit;
+import com.example.service.ArticleService;
+import com.example.service.ClientArticleService;
 import com.example.service.ClientService;
 import com.example.service.CreditService;
 import com.example.util.Main;
@@ -25,6 +29,15 @@ import java.util.ResourceBundle;
 
 public class LIstCredits implements Initializable {
     @FXML
+    private TableColumn<Article, String> ArticleC;
+
+    @FXML
+    private TableView<Article> ArticleView;
+    @FXML
+    private TableColumn<Article, Double> PrixC;
+    @FXML
+    private TextField QuantiteField;
+    @FXML
     private TextField ModifMax;
     @FXML
     private Button ModifBtn;
@@ -40,10 +53,8 @@ public class LIstCredits implements Initializable {
     @FXML
     private Text maxText;
 
-    @FXML
-    private Button NouveaCreditBtn;
-    @FXML
-    private TextField creditTF;
+
+
     @FXML
     private Text totalText;
 
@@ -67,13 +78,14 @@ public class LIstCredits implements Initializable {
 
     @FXML
     void nouveauCredit(ActionEvent event) throws IOException {
-        if (!creditTF.getText().isBlank()) {
-            if (Double.parseDouble(creditTF.getText()) + Main.selectedClient.getTotalCredits() > Main.selectedClient.getMax()) {
+        if (!QuantiteField.getText().isBlank()) {
+            if ((Double.parseDouble(QuantiteField.getText())*ArticleView.getSelectionModel().getSelectedItem().getDefaultPrice()) + Main.selectedClient.getTotalCredits() > Main.selectedClient.getMax()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Montant Invalide");
                 alert.setContentText("Credit depasse le montant maximal");
                 alert.show();
-            } else if((Double.parseDouble(creditTF.getText())>0)){
+            } else if((Double.parseDouble(QuantiteField.getText())>0)){
+                Double credit=Double.parseDouble(QuantiteField.getText())*ArticleView.getSelectionModel().getSelectedItem().getDefaultPrice();
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Ajouter Credit");
                 alert.setContentText("Voulez vous vraiment ajouter ce credit au client?");
@@ -82,13 +94,13 @@ public class LIstCredits implements Initializable {
                     new CreditService().insert(
                             new Credit(null,
                                     Main.selectedClient.getId(),
-                                    Double.parseDouble(creditTF.getText()),
+                                    credit,
                                     new Date())
                     );
                     refresh();
                 }
             }
-            creditTF.setText("");
+            QuantiteField.setText("");
         }
     }
     @FXML
@@ -144,12 +156,12 @@ public class LIstCredits implements Initializable {
         nomText.setText(Main.selectedClient.getFullName());
         numtelText.setText(Main.selectedClient.getPhoneNumber());
         refresh();
-        creditTF.textProperty().addListener(new ChangeListener<String>() {
+        QuantiteField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue,
                                 String newValue) {
                 if (!newValue.matches("\\d*")) {
-                    creditTF.setText(newValue.replaceAll("[^\\d]", ""));
+                    QuantiteField.setText(newValue.replaceAll("[^\\d]", ""));
                 }
             }
         });
@@ -162,15 +174,27 @@ public class LIstCredits implements Initializable {
                 }
             }
         });
-        ModifMax.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue,
-                                String newValue) {
-                if (!newValue.matches("\\d*")) {
-                    ModifMax.setText(newValue.replaceAll("[^\\d]", ""));
-                }
+
+        //table d'articles
+        ArticleC.setCellValueFactory(
+                c -> c.getValue().titleProperty()
+        );
+        PrixC.setCellValueFactory(
+                c -> c.getValue().defaultPriceProperty().asObject()
+        );
+
+
+        ArticleView.getColumns().setAll(ArticleC, PrixC);
+        ArticleView.getItems().clear();
+        ArticleView.getItems().addAll(new ArticleService().find(null, null));
+        ClientArticleService clientArticles = new ClientArticleService();
+        for (int i = 0; i < ArticleView.getItems().size(); i++) {
+            ClientArticle ca = clientArticles.findOne(Main.selectedClient.getId(), ArticleView.getItems().get(i).getId());
+            if (ca != null) {
+                ArticleView.getItems().get(i).setDefaultPrice(ca.getCustomPrice());
+
             }
-        });
+        }
     }
     private void refresh() {
         CreditService credits = new CreditService();
