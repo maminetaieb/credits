@@ -84,9 +84,8 @@ public class ModifierClient implements Initializable {
                 );
             }
         }
-        refresh();
-        selectArticle(null);
         PrixField.setText("");
+        refresh();
     }
 
     @FXML
