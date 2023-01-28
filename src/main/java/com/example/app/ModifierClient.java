@@ -67,6 +67,7 @@ public class ModifierClient implements Initializable {
                 new ClientArticleService().modify(cca);
             }
         } else {
+            ModifPrixBtn.setText("Modifier Prix");
             if (PrixField.getText().isBlank()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Erreur");
@@ -85,6 +86,7 @@ public class ModifierClient implements Initializable {
         }
         refresh();
         selectArticle(null);
+        PrixField.setText("");
     }
 
     @FXML
@@ -105,6 +107,8 @@ public class ModifierClient implements Initializable {
             alert.setContentText("Veuillez Remplir les champs nécessaires");
             alert.show();
         } else if(Main.selectedClient.getTotalCredits()<=Double.parseDouble(maxField.getText())) {
+            Main.selectedClient.setFullName(nomField.getText());
+            Main.selectedClient.setPhoneNumber(numTelField.getText());
             Main.selectedClient.setMax(Double.parseDouble(maxField.getText()));
             new ClientService().modify(Main.selectedClient);
             AnchorPane pane = FXMLLoader.load(getClass().getResource("ListClients.fxml"));
@@ -143,12 +147,12 @@ public class ModifierClient implements Initializable {
                 a -> a.getValue().defaultPriceProperty().asObject()
         );
         articleTable.getColumns().setAll(NomC, PrixC);
-        articleTable.getItems().clear();
-        articleTable.getItems().addAll(new ArticleService().find(null, null));
         refresh();
     }
 
     public void refresh() {
+        articleTable.getItems().clear();
+        articleTable.getItems().addAll(new ArticleService().find(null, null));
         ClientArticleService clientArticles = new ClientArticleService();
         for (int i=0; i < articleTable.getItems().size(); i++) {
             ClientArticle ca = clientArticles.findOne(Main.selectedClient.getId(), articleTable.getItems().get(i).getId());
