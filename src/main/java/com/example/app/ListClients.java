@@ -157,8 +157,9 @@ public class ListClients implements Initializable {
         chercherClient(null);
     }
     @FXML
-    void modifierArticle(ActionEvent event) {
-
+    void modifierArticle(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("ModifierArticle.fxml"));
+        listClientPane.getChildren().setAll(pane);
     }
     @FXML
     void disconnect(ActionEvent event) throws IOException {

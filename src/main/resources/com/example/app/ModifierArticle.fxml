@@ -8,13 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="modifArticlePane" prefHeight="651.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.ModifierArticle">
+<AnchorPane fx:id="modifArticlePane" prefHeight="651.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.ModifierArticle">
    <children>
-      <TableView fx:id="articleView" layoutX="63.0" layoutY="150.0" prefHeight="434.0" prefWidth="577.0">
+      <TableView fx:id="articleView" layoutX="63.0" layoutY="150.0" onMouseClicked="#selectArticle" prefHeight="434.0" prefWidth="577.0">
         <columns>
           <TableColumn fx:id="NomC" prefWidth="302.0" text="Nom Article" />
-          <TableColumn fx:id="PrixC" prefWidth="161.0" text="Prix" />
+          <TableColumn fx:id="PrixC" prefWidth="274.3999877929688" text="Prix" />
         </columns>
       </TableView>
       <TextField fx:id="nomField" layoutX="661.0" layoutY="273.0" prefHeight="38.0" prefWidth="179.0" />
@@ -32,6 +31,11 @@
       <Button fx:id="ValiderBtn" layoutX="691.0" layoutY="441.0" mnemonicParsing="false" onAction="#validerModif" prefHeight="38.0" prefWidth="120.0" text="Valider">
          <font>
             <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="804.0" layoutY="35.0" mnemonicParsing="false" onAction="#goToListeClients" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: #199cc3;" text="Voir liste clients" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
          </font>
       </Button>
    </children>
