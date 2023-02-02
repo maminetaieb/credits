@@ -77,7 +77,7 @@ public class ListClients implements Initializable {
     void historique(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("Historique.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 522, 631);
+        Scene scene = new Scene(fxmlLoader.load(), 589, 644);
         Stage stage = new Stage();
         stage.setTitle("Historique");
         stage.setScene(scene);

@@ -11,53 +11,56 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="ListCreditsPane" prefHeight="651.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.LIstCredits">
+<AnchorPane fx:id="ListCreditsPane" prefHeight="651.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.LIstCredits">
    <children>
-      <ImageView fitHeight="94.0" fitWidth="99.0" layoutX="27.0" layoutY="124.0">
+      <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="28.0" layoutY="23.0">
          <image>
             <Image url="@../img/pic.png" />
          </image>
       </ImageView>
-      <Text layoutX="176.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :  " wrappingWidth="200.13671875">
-         <font>
-            <Font name="Calibri Bold" size="23.0" />
-         </font>
-      </Text>
-      <ListView fx:id="listCreditView" layoutX="577.0" layoutY="80.0" prefHeight="437.0" prefWidth="345.0" />
-      <Button fx:id="NouveaCreditBtn" layoutX="508.0" layoutY="313.0" mnemonicParsing="false" onAction="#nouveauCredit" prefHeight="26.0" prefWidth="61.0" text="Valider" />
-      <Button fx:id="SupprimerClientBtn" layoutX="6.0" layoutY="339.0" mnemonicParsing="false" onAction="#supprimerClient" prefHeight="36.0" prefWidth="116.0" text="Supprimer Client" />
-      <Text fx:id="nomText" layoutX="13.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amine Taieb" wrappingWidth="200.13671875">
+      <Text layoutX="434.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :  " wrappingWidth="200.13671875">
          <font>
             <Font name="Calibri" size="23.0" />
          </font>
       </Text>
-      <Text fx:id="numtelText" layoutX="22.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25462198" wrappingWidth="200.13671875">
+      <ListView fx:id="listCreditView" layoutX="428.0" layoutY="200.0" prefHeight="437.0" prefWidth="530.0" />
+      <Button fx:id="NouveaCreditBtn" layoutX="362.0" layoutY="386.0" mnemonicParsing="false" onAction="#nouveauCredit" prefHeight="26.0" prefWidth="61.0" text="Valider" />
+      <Button fx:id="SupprimerClientBtn" layoutX="142.0" layoutY="137.0" mnemonicParsing="false" onAction="#supprimerClient" prefHeight="26.0" prefWidth="106.0" text="Supprimer Client" />
+      <Text fx:id="nomText" layoutX="142.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amine Taieb" wrappingWidth="200.13671875">
          <font>
             <Font name="Calibri" size="23.0" />
          </font>
       </Text>
-      <Button fx:id="PaiementBtn" layoutX="361.0" layoutY="533.0" mnemonicParsing="false" onAction="#paiement" prefHeight="36.0" prefWidth="116.0" text="Paiement" />
-      <Text fx:id="totalText" layoutX="250.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total" wrappingWidth="166.13671875">
+      <Text fx:id="numtelText" layoutX="142.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25462198" wrappingWidth="200.13671875">
          <font>
             <Font name="Calibri" size="23.0" />
          </font>
       </Text>
-      <TextField fx:id="QuantiteField" layoutX="504.0" layoutY="266.0" prefHeight="0.0" prefWidth="69.0" />
-      <TextField fx:id="paymentTF" layoutX="176.0" layoutY="533.0" prefHeight="36.0" prefWidth="157.0" />
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToListeClients" text="Voir liste clients" />
-      <Button fx:id="ModifBtn" layoutX="6.0" layoutY="418.0" mnemonicParsing="false" onAction="#modifierClient" prefHeight="36.0" prefWidth="116.0" text="Modifier" />
-      <TableView fx:id="ArticleView" layoutX="159.0" layoutY="79.0" prefHeight="437.0" prefWidth="338.0">
+      <Button fx:id="PaiementBtn" layoutX="855.0" layoutY="168.0" mnemonicParsing="false" onAction="#paiement" prefHeight="27.0" prefWidth="99.0" text="Paiement" />
+      <Text fx:id="totalText" layoutX="498.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total" wrappingWidth="166.13671875">
+         <font>
+            <Font name="Calibri" size="23.0" />
+         </font>
+      </Text>
+      <TextField fx:id="QuantiteField" layoutX="358.0" layoutY="348.0" prefHeight="0.0" prefWidth="69.0" />
+      <TextField fx:id="paymentTF" layoutX="720.0" layoutY="168.0" prefHeight="27.0" prefWidth="135.0" />
+      <Button layoutX="831.0" layoutY="37.0" mnemonicParsing="false" onAction="#goToListeClients" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: #199cc3;" text="Voir liste clients" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="ModifBtn" layoutX="28.0" layoutY="137.0" mnemonicParsing="false" onAction="#modifierClient" prefHeight="26.0" prefWidth="106.0" text="Modifier" />
+      <TableView fx:id="ArticleView" layoutX="15.0" layoutY="200.0" prefHeight="437.0" prefWidth="343.0">
         <columns>
-          <TableColumn fx:id="ArticleC" prefWidth="239.0" text="Nom Article" />
-          <TableColumn fx:id="PrixC" minWidth="0.0" prefWidth="111.0" text="Prix" />
+          <TableColumn fx:id="ArticleC" prefWidth="200.0" text="Nom Article" />
+          <TableColumn fx:id="PrixC" minWidth="0.0" prefWidth="150.0" text="Prix" />
         </columns>
       </TableView>
-      <Text layoutX="594.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max : " wrappingWidth="200.13671875">
+      <Text layoutX="142.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max : " wrappingWidth="200.13671875">
          <font>
-            <Font name="Calibri Bold" size="23.0" />
+            <Font name="Calibri" size="23.0" />
          </font>
       </Text>
-      <Text fx:id="maxText" layoutX="655.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" wrappingWidth="166.13671875">
+      <Text fx:id="maxText" layoutX="202.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" wrappingWidth="166.13671875">
          <font>
             <Font name="Calibri" size="23.0" />
          </font>
