@@ -24,6 +24,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ListClients implements Initializable {
+
     @FXML
     private Button HistoriqueBtn;
 
@@ -59,6 +60,9 @@ public class ListClients implements Initializable {
     private Button voirClientBtn;
     @FXML
     private Button NouveauBtn;
+    @FXML
+    private Button ModifBtn;
+
 
     @FXML
     void nouveauArticle(ActionEvent event) throws IOException {
@@ -151,6 +155,10 @@ public class ListClients implements Initializable {
         );
         listClient.getColumns().setAll(nomC, numTelC, creditsC);
         chercherClient(null);
+    }
+    @FXML
+    void modifierArticle(ActionEvent event) {
+
     }
     @FXML
     void disconnect(ActionEvent event) throws IOException {

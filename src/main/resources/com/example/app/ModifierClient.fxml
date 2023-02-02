@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ModifClientPane" prefHeight="651.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.ModifierClient">
+<AnchorPane fx:id="ModifClientPane" prefHeight="651.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.ModifierClient">
    <children>
       <Label layoutX="114.0" layoutY="81.0" text="Nom Prénom">
          <font>
@@ -40,6 +40,6 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="ModifPrixBtn" layoutX="797.0" layoutY="75.0" mnemonicParsing="false" onAction="#modiferPrix" prefHeight="38.0" prefWidth="84.0" text="Modifier Prix" />
+      <Button fx:id="ModifPrixBtn" layoutX="797.0" layoutY="75.0" mnemonicParsing="false" onAction="#modiferPrix" prefHeight="38.0" prefWidth="109.0" text="Modifier Prix" />
    </children>
 </AnchorPane>
