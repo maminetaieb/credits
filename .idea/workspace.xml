@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="finallsldmvkmkf">
+    <list default="true" id="0668c8ee-dea3-44ac-a89d-aa3e58f85d9c" name="Changes" comment="dfdfdfdfdfdfdfdffffd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/app/ModifierClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/app/ModifierClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/entity/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/entity/Credit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +96,9 @@
       <workItem from="1674775452124" duration="189000" />
       <workItem from="1674777475915" duration="524000" />
       <workItem from="1674779005592" duration="256000" />
-      <workItem from="1674851603772" duration="13771000" />
+      <workItem from="1674851603772" duration="13952000" />
+      <workItem from="1675082640939" duration="75000" />
+      <workItem from="1675117301481" duration="3298000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1674583071513</created>
@@ -301,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674866819106</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="jghdlknf nildf">
+      <created>1674867600020</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1674867600020</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +328,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ssdfsdf" />
     <MESSAGE value="ggg" />
     <MESSAGE value="user" />
     <MESSAGE value="jdjfjdf" />
@@ -344,7 +352,8 @@
     <MESSAGE value="dsf" />
     <MESSAGE value="dsfdklm lkmdfkml dnlf knldf" />
     <MESSAGE value="finallsldmvkmkf" />
-    <option name="LAST_COMMIT_MESSAGE" value="finallsldmvkmkf" />
+    <MESSAGE value="jghdlknf nildf" />
+    <option name="LAST_COMMIT_MESSAGE" value="jghdlknf nildf" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/credits$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1674672389478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
