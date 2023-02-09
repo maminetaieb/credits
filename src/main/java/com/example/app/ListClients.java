@@ -35,7 +35,7 @@ public class ListClients implements Initializable {
     private TextField chercherField;
 
     @FXML
-    private TableColumn<Client, Double> creditsC;
+    private TableColumn<Client, String> creditsC;
 
     @FXML
     private TableView<Client> listClient;
@@ -151,7 +151,7 @@ public class ListClients implements Initializable {
                 c -> c.getValue().phoneNumberProperty()
         );
         creditsC.setCellValueFactory(
-                c -> c.getValue().totalCreditsProperty().asObject()
+                c -> c.getValue().totalCreditsProperty()
         );
         listClient.getColumns().setAll(nomC, numTelC, creditsC);
         chercherClient(null);

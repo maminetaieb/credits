@@ -11,14 +11,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="ListCreditsPane" prefHeight="651.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.LIstCredits">
+<AnchorPane fx:id="ListCreditsPane" prefHeight="651.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.LIstCredits">
    <children>
       <ImageView fitHeight="106.0" fitWidth="106.0" layoutX="28.0" layoutY="23.0">
          <image>
             <Image url="@../img/pic.png" />
          </image>
       </ImageView>
-      <Text layoutX="434.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :  " wrappingWidth="200.13671875">
+      <Text layoutX="431.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :  " wrappingWidth="200.13671875">
          <font>
             <Font name="Calibri" size="23.0" />
          </font>
@@ -37,7 +37,7 @@
          </font>
       </Text>
       <Button fx:id="PaiementBtn" layoutX="855.0" layoutY="168.0" mnemonicParsing="false" onAction="#paiement" prefHeight="27.0" prefWidth="99.0" text="Paiement" />
-      <Text fx:id="totalText" layoutX="498.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total" wrappingWidth="166.13671875">
+      <Text fx:id="totalText" layoutX="495.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total" wrappingWidth="218.93670654296875">
          <font>
             <Font name="Calibri" size="23.0" />
          </font>
@@ -60,7 +60,7 @@
             <Font name="Calibri" size="23.0" />
          </font>
       </Text>
-      <Text fx:id="maxText" layoutX="202.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" wrappingWidth="166.13671875">
+      <Text fx:id="maxText" layoutX="204.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" wrappingWidth="352.5367431640625">
          <font>
             <Font name="Calibri" size="23.0" />
          </font>

@@ -1,6 +1,7 @@
 package com.example.entity;
 
 import com.example.service.CreditService;
+import com.example.util.Main;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import java.util.Observable;
@@ -56,8 +57,12 @@ public class Client extends Observable {
         return new CreditService().findByClientId(this.getId(), null, null)
                 .stream().mapToDouble(credit -> credit.getAmount()).sum();
     }
-    public SimpleDoubleProperty totalCreditsProperty() {
+    /*public SimpleDoubleProperty totalCreditsProperty() {
         return new SimpleDoubleProperty(this.getTotalCredits());
+    }*/
+
+    public SimpleStringProperty totalCreditsProperty() {
+        return new SimpleStringProperty(Main.df.format(this.getTotalCredits()));
     }
 
     public Client(Integer id, String fullName, String phoneNumber, Double max) {

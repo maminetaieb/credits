@@ -138,7 +138,7 @@ public class ModifierClient implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         nomField.setText(Main.selectedClient.getFullName());
         numTelField.setText(Main.selectedClient.getPhoneNumber());
-        maxField.setText(String.valueOf(Main.selectedClient.getMax()));
+        maxField.setText(Main.df.format(Main.selectedClient.getMax()));
         ModifPrixBtn.setDisable(true);
         PrixField.setDisable(true);
         NomC.setCellValueFactory(

@@ -1,6 +1,7 @@
 package com.example.entity;
 
 import com.example.service.ClientService;
+import com.example.util.Main;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -64,6 +65,6 @@ public class Credit {
 
     @Override
     public String toString() {
-        return new ClientService().findOne(this.getClientId()).getFullName() + (amount > 0 ? " a pris un credit de " : " a payé ") + Math.abs(amount) + " DT " +getMessage()+ " le " + new SimpleDateFormat("yyyy-MM-dd HH:mm").format(date.getTime());
+        return new ClientService().findOne(this.getClientId()).getFullName() + (amount > 0 ? " a pris un credit de " : " a payé ") + Main.df.format(Math.abs(amount)) + " DT " +getMessage()+ " le " + new SimpleDateFormat("yyyy-MM-dd HH:mm").format(date.getTime());
     }
 }

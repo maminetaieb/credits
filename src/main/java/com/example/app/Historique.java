@@ -2,6 +2,7 @@ package com.example.app;
 
 import com.example.entity.Credit;
 import com.example.service.CreditService;
+import com.example.util.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
@@ -25,7 +26,7 @@ public class Historique implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         CreditService credits = new CreditService();
         List<Credit> list =credits.find(null, null);
-        totalCredit.setText(String.valueOf(list.stream().mapToDouble(c->c.getAmount()).sum()));
+        totalCredit.setText(Main.df.format(list.stream().mapToDouble(c->c.getAmount()).sum()));
         historiqueView.getItems().clear();
         historiqueView.getItems().setAll(list);
         historiqueView.refresh();

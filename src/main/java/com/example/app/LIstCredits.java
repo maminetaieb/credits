@@ -200,11 +200,11 @@ public class LIstCredits implements Initializable {
     private void refresh() {
         CreditService credits = new CreditService();
         List<Credit> listCredits = credits.findByClientId(Main.selectedClient.getId(), null, null);
-        totalText.setText(String.valueOf(listCredits.stream().mapToDouble(credit -> credit.getAmount()).sum()));
+        totalText.setText(Main.df.format(listCredits.stream().mapToDouble(credit -> credit.getAmount()).sum()));
         listCreditView.getItems().clear();
         listCreditView.getItems().setAll(listCredits);
         listCreditView.refresh();
-        maxText.setText(String.valueOf(Main.selectedClient.getMax()));
+        maxText.setText(Main.df.format(Main.selectedClient.getMax()));
     }
 
     @FXML

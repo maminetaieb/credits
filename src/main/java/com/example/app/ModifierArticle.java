@@ -45,7 +45,7 @@ public class ModifierArticle implements Initializable {
     void selectArticle(MouseEvent event) {
         Article a = articleView.getSelectionModel().getSelectedItem();
         nomField.setText(a.getTitle());
-        prixField.setText(String.valueOf(a.getDefaultPrice()));
+        prixField.setText(Main.df.format(a.getDefaultPrice()));
     }
 
     @FXML
